@@ -1,5 +1,5 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-    -- font-family: Orbitron, sans-serif;
+  --font-family-sans: Orbitron, sans-serif;
 }

@@ -21,10 +21,11 @@ interface AppState {
 class ErrorThrower extends Component {
   render(): ReactNode {
     throw new Error('💥 Manual test error from ErrorThrower component');
+    return null;
   }
 }
 
-class App extends Component<{}, AppState> {
+class App extends Component<object, AppState> {
   state: AppState = {
     request: '',
     results: [],
@@ -50,9 +51,10 @@ class App extends Component<{}, AppState> {
       if (!res.ok) throw new Error('Character not found');
       const data = await res.json();
       this.setState({ results: data.results, loading: false });
-    } catch (err: any) {
+    } catch (err) {
       console.error(err);
-      this.setState({ error: err.message, results: [], loading: false });
+      const error = err instanceof Error ? err : new Error('Unknown error');
+      this.setState({ error: error.message, results: [], loading: false });
     }
   };
 

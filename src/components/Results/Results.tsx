@@ -36,7 +36,11 @@ class Results extends React.Component<ResultsProps> {
             key={char.id}
             className="bg-[#1a1a2e] p-4 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1"
           >
-            <img src={char.image} alt={char.name} className="w-full rounded-lg mb-2" />
+            <img
+              src={char.image}
+              alt={char.name}
+              className="w-full rounded-lg mb-2"
+            />
             <h3 className="text-lg font-bold">{char.name}</h3>
             <p className="text-sm text-gray-400">{char.species}</p>
           </div>
