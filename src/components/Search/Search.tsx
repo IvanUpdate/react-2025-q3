@@ -38,7 +38,7 @@ class Search extends Component<SearchProps, SearchState> {
           value={this.state.input}
           onChange={this.handleChange}
           onKeyDown={this.handleKeyDown}
-          placeholder="Search Rick, Morty..."
+          placeholder=""
           className="flex-grow px-6 py-3 rounded-full bg-transparent border-2 border-[#00ffcc] text-white placeholder-[#9effe3] outline-none transition focus:ring-4 focus:ring-[#00ffcc]/50 backdrop-blur-md"
         />
         <button
