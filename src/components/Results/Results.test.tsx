@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Results from './Results'; // Adjust path if needed
+import Results from './Results';
 import { describe, expect, it } from 'vitest';
 import { mockCharacters } from '../../__tests__/mockCharacters';
 
